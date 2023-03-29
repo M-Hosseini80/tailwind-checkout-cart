@@ -1,1 +1,1 @@
-"# tailwind-checkout-card" 
+"# tailwind-checkout-cart" 
