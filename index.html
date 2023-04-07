@@ -2,36 +2,156 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tailwind Checkout Component</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body>
         <div class="h-20 bg-white shadow">
-            <div class="h-full w-full max-w-7xl mx-auto p-3 flex items-center">
-
+            <div class="h-full w-full max-w-7xl mx-auto p-3 flex flex-row-reverse justify-between items-center">
+                <a href="/" title="logo">
+                    <img class="max-w-[150px]" src="images/logo.png" alt="" />
+                </a>
                 <!-- cart -->
-                <div>
-                    <svg class="h-8 w-8 text-gray-400 cursor-pointer hover:text-gray-500 transition" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="9" cy="21" r="1" />
-                        <circle cx="20" cy="21" r="1" />
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                    </svg>
-                </div>
+                <div class="group">
+                    <div class="cursor-pointer">
+                        <svg class="h-8 w-8 " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                    </div>
 
-                <!-- cart items -->
-                <div class="p-3  divide-y divide-gray-100 max-h-[300px] overflow-y-auto">
-                    <div>
+                    <!-- cart items -->
+                    <div class="hidden group-hover:block absolute bg-white shadow">
+                        <div class="p-3">
+                            <h2 class="font-bold">Cart (3)</h2>
+                        </div>
+                        <div
+                            class="divide-y divide-gray-100 overflow-y-auto h-[300px] w-[300px] max-w-sm min-h-[300px] space-y-4 p-3">
+                            <!-- Empty Cart -->
+                            <!-- <div
+                                                    class="   w-full h-full text-center flex flex-col justify-center items-center gap-2 text-gray-400">
+                                                    <svg class="h-20 w-20" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <circle cx="12" cy="12" r="9" />
+                                                        <line x1="9" y1="10" x2="9.01" y2="10" />
+                                                        <line x1="15" y1="10" x2="15.01" y2="10" />
+                                                        <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+                                                    </svg>
+                                                    <h4 class="text-2xl">Cart items are empty!</h4>
+                                                    <a href="#" class="text-blue-800 text-center flex text-xl items-center justify-center">
+                                                        <p>Shop</p> <svg class="h-6 w-6 mt-2" width="24" height="24" viewBox="0 0 24 24"
+                                                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                                            <polyline points="9 6 15 12 9 18" />
+                                                        </svg>
+                                                    </a>
+                                                </div> -->
 
+                            <!-- cart item -->
+                            <div class="grid grid-cols-8 items-center not pt-4 first:pt-0">
+                                <a href="#" class="col-span-2 flex justify-center items-center">
+                                    <img class="w-full"
+                                        src="images/Apple%20iPhone%2012%20mini%20Silicone%20Case%20with%20MagSafe.jpg"
+                                        alt="Apple iPhone 12 mini Silicone Case with MagSafe" />
+                                </a>
+                                <div class="col-span-5 flex flex-col text-sm">
+                                    <a href="#">
+                                        <h3 class="text-gray-400">Apple iPhone 12 mini Silicone Case with MagSafe</h3>
+                                    </a>
+                                    <div class="text-gray-400">
+                                        Stuck: 1
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="line-through text-xs">$9.99</span>
+                                        <span>$7.99</span>
+                                    </div>
+                                </div>
+                                <a href="#" title="remove item" class="col-span-1 flex justify-center items-center">
+                                    <svg class="h-6 w-6 text-black" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- cart item -->
+                            <div class="grid grid-cols-8 items-center not pt-4 first:pt-0">
+                                <a href="#" class="col-span-2 flex justify-center items-center">
+                                    <img class="w-full" src="images/New%20Apple%20iPhone%2012%20Mini%20(128GB).jpg"
+                                        alt="New Apple iPhone 12 Mini (128GB)" />
+                                </a>
+                                <div class="col-span-5 flex flex-col text-sm">
+                                    <a href="#">
+                                        <h3 class="text-gray-400">New Apple iPhone 12 Mini (128GB)</h3>
+                                    </a>
+                                    <div class="text-gray-400">
+                                        Stuck: 1
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="line-through text-xs">$998.99</span>
+                                        <span>$899.99</span>
+                                    </div>
+                                </div>
+                                <a href="#" title="remove item" class="col-span-1 flex justify-center items-center">
+                                    <svg class="h-6 w-6 text-black" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- cart item -->
+                            <div class="grid grid-cols-8 items-center not pt-4 first:pt-0">
+                                <a href="#" class="col-span-2 flex justify-center items-center">
+                                    <img class="w-full" src="images/Apple%20iPhone%2013%20pro%20max.png"
+                                        alt="Apple iPhone 13 pro max" />
+                                </a>
+                                <div class="col-span-5 flex flex-col text-sm">
+                                    <a href="#">
+                                        <h3 class="text-gray-400">Apple iPhone 13 pro max</h3>
+                                    </a>
+                                    <div class="text-gray-400">
+                                        Stuck: 1
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="line-through text-xs">$9.99</span>
+                                        <span>$7.99</span>
+                                    </div>
+                                </div>
+                                <a href="#" title="remove item" class="col-span-1 flex justify-center items-center">
+                                    <svg class="h-6 w-6 text-black" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-3 flex justify-between items-center">
+                            <a href="#"
+                                class="px-4 py-1 border-2 border-black text-black hover:text-white hover:bg-black">VIEW
+                                CART</a>
+                            <a href="#"
+                                class="px-4 py-1 border-2 border-black bg-black text-white hover:bg-white hover:text-black">CHECKOUT</a>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </body>
